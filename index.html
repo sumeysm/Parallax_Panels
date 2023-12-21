@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Slider with Form</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="slider" class="swipe">
+        <div class="swipe-wrap">
+            <div style="background-image:url(//images.unsplash.com/photo-1441644599508-24ae08965c5c?w=1275)">
+                <h1>the text is placed</h1>
+                <h2>on layers that are</h2>
+                <h3>translated on the z-axis</h3>
+              </div>
+              
+              <div style="background-image:url(//images.unsplash.com/photo-1439792675105-701e6a4ab6f0?w=1275)">
+                <h1>the script</h1>
+                <h2>doesn't have to know</h2>
+                <h3>anything about the layers</h3>
+              </div>
+            <!-- Placeholder for dynamically added slides -->
+        </div>
+    </div>
+
+<div id="slider" class="swipe">
+    <div class="swipe-wrap">
+        <!-- Existing slider sections can be added here -->
+   
+    </div>
+</div>
+
+<!-- Slider Input Form -->
+<form id="sliderInputForm">
+    <label for="backgroundImageURL">Background Image URL:</label>
+    <input type="text" id="backgroundImageURL" name="backgroundImageURL" placeholder="Enter image URL"><br>
+
+    <label for="h1Text">Text for H1:</label>
+    <input type="text" id="h1Text" name="h1Text" placeholder="Enter text for H1"><br>
+
+    <label for="h2Text">Text for H2:</label>
+    <input type="text" id="h2Text" name="h2Text" placeholder="Enter text for H2"><br>
+
+    <label for="h3Text">Text for H3:</label>
+    <input type="text" id="h3Text" name="h3Text" placeholder="Enter text for H3"><br>
+
+    <button type="button" id="submitBtn">Add to Slider</button>
+</form>
+
+<script>
+   // Script for adding new div to slider and slider functionality
+   document.getElementById('submitBtn').addEventListener('click', function() {
+        // ... (Keep previous script for adding div here) ...
+
+        // Make newly added div the active slide
+        var slides = document.querySelectorAll('.swipe-wrap > div');
+        slides.forEach(function(slide) {
+            slide.classList.remove('active');
+        });
+        newDiv.classList.add('active');
+    });
+
+    // Basic functionality to cycle through slides
+    // function nextSlide() {
+    //     var slides = document.querySelectorAll('.swipe-wrap > div');
+    //     var activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+    //     var nextIndex = (activeIndex + 1) % slides.length;
+        
+    //     slides[activeIndex].classList.remove('active');
+    //     slides[nextIndex].classList.add('active');
+    // }
+
+    // // Optional: Automatically move to the next slide every few seconds
+    // setInterval(nextSlide, 3000); // Change slides every 3 seconds
+</script>
+<script src="script.js"></script>
+</body>
+</html>
