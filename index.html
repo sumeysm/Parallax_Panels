@@ -47,32 +47,6 @@
     <button type="button" id="submitBtn">Add to Slider</button>
 </form>
 
-<script>
-   // Script for adding new div to slider and slider functionality
-   document.getElementById('submitBtn').addEventListener('click', function() {
-        // ... (Keep previous script for adding div here) ...
-
-        // Make newly added div the active slide
-        var slides = document.querySelectorAll('.swipe-wrap > div');
-        slides.forEach(function(slide) {
-            slide.classList.remove('active');
-        });
-        newDiv.classList.add('active');
-    });
-
-    // Basic functionality to cycle through slides
-    // function nextSlide() {
-    //     var slides = document.querySelectorAll('.swipe-wrap > div');
-    //     var activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-    //     var nextIndex = (activeIndex + 1) % slides.length;
-        
-    //     slides[activeIndex].classList.remove('active');
-    //     slides[nextIndex].classList.add('active');
-    // }
-
-    // // Optional: Automatically move to the next slide every few seconds
-    // setInterval(nextSlide, 3000); // Change slides every 3 seconds
-</script>
 <script src="script.js"></script>
 </body>
 </html>
